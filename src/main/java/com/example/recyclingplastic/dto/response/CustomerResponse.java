@@ -1,5 +1,6 @@
-package com.example.recyclingplastic.dto;
+package com.example.recyclingplastic.dto.response;
 
+import com.example.recyclingplastic.dto.request.CustomerRequest;
 import lombok.Data;
 
 import java.util.List;

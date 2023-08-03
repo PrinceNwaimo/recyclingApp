@@ -1,7 +1,7 @@
 package com.example.recyclingplastic.controller;
 
-import com.example.recyclingplastic.dto.CustomerRequest;
-import com.example.recyclingplastic.dto.CustomerResponse;
+import com.example.recyclingplastic.dto.request.CustomerRequest;
+import com.example.recyclingplastic.dto.response.CustomerResponse;
 import com.example.recyclingplastic.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

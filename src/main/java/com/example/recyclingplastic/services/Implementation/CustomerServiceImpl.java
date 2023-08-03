@@ -1,7 +1,7 @@
-package com.example.recyclingplastic.services.Impl;
+package com.example.recyclingplastic.services.Implementation;
 
-import com.example.recyclingplastic.dto.CustomerRequest;
-import com.example.recyclingplastic.dto.CustomerResponse;
+import com.example.recyclingplastic.dto.request.CustomerRequest;
+import com.example.recyclingplastic.dto.response.CustomerResponse;
 import com.example.recyclingplastic.exceptions.CustomerNotFoundException;
 import com.example.recyclingplastic.models.Customer;
 import com.example.recyclingplastic.models.Role;

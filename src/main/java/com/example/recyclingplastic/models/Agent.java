@@ -1,33 +1,39 @@
 package com.example.recyclingplastic.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Data
+
+@Setter
+@Getter
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-public class Customer {
+public class Agent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long customerId;
-    private String first_name;
-    private String last_name;
+    private Long agentId;
+
+//    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private String firstName;
+    private String lastName;
     private String email;
     private String password;
+
     @Enumerated(EnumType.STRING)
     private Role role;
     private String username;
+
+    @JsonIgnore
+    private Boolean isEnabled;
 
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateDeserializer.class)
